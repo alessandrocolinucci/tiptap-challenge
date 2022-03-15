@@ -4,8 +4,9 @@
   "description": "TypeScript application",
   "scripts": {
     "test": "jest test sample.test.ts",
-    "step1": "npx tsc && node dist/step1/main.js 1 20",
-    "step2": "npx tsc && node dist/step2/main.js 2 14"
+    "step1": "npx tsc && node dist/step1/main.js -3 -1",
+    "step2": "npx tsc && node dist/step2/main.js 2 14",
+    "step3": "npx tsc && node dist/step3/main.js 1 20"
   },
   "repository": {
     "type": "git",

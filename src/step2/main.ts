@@ -1,38 +1,14 @@
-import { TipTapValue } from "../common/types";
+import { _createRange, _getParams } from "../common/functions";
+import { Step } from "../common/step";
 
 // Getting Params
-const params = process.argv.slice(2);
-const start = Number(params[0]);
-const end = Number(params[1]);
+const params = _getParams();
 
 // Creating range
-const range = [...Array(end - start + 1)].map((_, i) => start + i);
+const range = _createRange(params.start, params.end);
 
-// Mapping array
-const mapped: TipTapValue[] = range.map(item => {
-
-    if (item.toString().includes('3')) {
-        return 'gold';
-    } else {
-        if (item % 15 === 0) {
-            return 'tiptap';
-        }
-    
-        if (item % 5 === 0) {
-            return 'tap';
-        }
-
-        if (item % 3 === 0) {
-            return 'tip';
-        }
-    }
-    
-
-    return item;
-})
-
-// Joining array
-const result = mapped.join(' ');
+// Creating Step
+const step = new Step(range, 'step2');
 
 // Logging result
-console.log(`Result 👉   ${result}`);
+console.log(`Result 👉   ${step.readableResult}`);

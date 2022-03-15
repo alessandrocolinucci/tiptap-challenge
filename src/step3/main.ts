@@ -8,7 +8,10 @@ const params = _getParams();
 const range = _createRange(params.start, params.end);
 
 // Creating Step
-const step = new Step(range);
+const step = new Step(range, 'step3');
 
 // Logging result
 console.log(`Result 👉   ${step.readableResult}`);
+
+// Logging report
+console.log(`Report 👉   ${JSON.stringify(step.report)}`);
