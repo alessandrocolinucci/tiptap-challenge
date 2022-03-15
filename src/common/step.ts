@@ -46,7 +46,3 @@ export class Step {
     }
 
 }
-
-export interface Report {
-    integer: number
-}
