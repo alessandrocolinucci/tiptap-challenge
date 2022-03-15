@@ -1,2 +1,2 @@
 // Declaring type
-export type TipTapValue = number | 'tip' | 'tap' | 'tiptap';
+export type TipTapValue = number | 'tip' | 'tap' | 'tiptap' | 'gold';
