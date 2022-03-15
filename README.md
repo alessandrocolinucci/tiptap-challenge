@@ -4,6 +4,8 @@ TipTap challenge with automated test. 🧪 <br /><br />
 
 ### Instructions
 
+Run `npm install`
+
 - If you need to execute test for all steps just run `npm run test`
 
 - If you want to execute steps one at time `npm run stepX`
