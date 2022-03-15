@@ -1,0 +1,16 @@
+{
+  "name": "tiptap-challenge",
+  "version": "1.0.0",
+  "description": "TypeScript application",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "npx tsc && node dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-acolinucci:alessandrocolinucci/tiptap-challenge.git"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.2"
+  }
+}
