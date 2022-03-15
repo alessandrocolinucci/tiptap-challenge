@@ -37,12 +37,16 @@ export class Step {
         return this.result.join(' ');
     }
 
-    get report(): any {
-        return this.result.reduce((res: any, value: TipTapValue) => {
+    get report(): Map<TipTapValue, number> {
+        return this.result.reduce((map: Map<TipTapValue, number>, value: TipTapValue) => {
             const index = typeof value === "number" ? 'integer' : value;
-            res[index] = (res[index] || 0) + 1;
-            return res;
-        }, {});
+            map.set(index, (map.get(index) || 0) + 1);
+            return map;
+        }, new Map<TipTapValue, number>());
     }
 
+}
+
+export interface Report {
+    integer: number
 }
